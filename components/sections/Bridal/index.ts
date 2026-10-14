@@ -1,0 +1,1 @@
+export { Bridal } from "./Bridal";

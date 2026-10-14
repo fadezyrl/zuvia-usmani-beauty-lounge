@@ -1,0 +1,17 @@
+@media (max-width: 640px) {
+  .bridal {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .bridal .full {
+    aspect-ratio: 4 / 5;
+    min-height: 0;
+  }
+
+  .bridal h2 {
+    margin-top: 0;
+    font-size: clamp(2.6rem, 7.5vw, 6.6rem);
+  }
+}

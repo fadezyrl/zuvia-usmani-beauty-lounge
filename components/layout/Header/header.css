@@ -1,0 +1,87 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding-top: env(safe-area-inset-top, 0px);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.solid {
+  background: var(--ivory);
+  border-color: var(--taupe);
+}
+
+.site-header.over {
+  background: var(--black);
+  color: var(--ivory);
+  border-color: #2f2a27;
+}
+
+.site-header.tone-greige {
+  background: var(--greige);
+}
+
+.site-header.tone-taupe {
+  background: var(--taupe);
+}
+
+.site-header.tone-deep {
+  background: var(--deep);
+  color: var(--ivory);
+}
+
+.site-header .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 var(--pad);
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.site-header .mono {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--ivory);
+  display: grid;
+  place-items: center;
+  font: 500 1.5rem / 1 var(--serif);
+  flex: none;
+}
+
+.site-header.over .mono,
+.site-header.tone-deep .mono {
+  background: var(--ivory);
+  color: var(--black);
+}
+
+.site-header .logo b {
+  font: 500 1.1rem / 1.1 var(--serif);
+  max-width: 11ch;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-header .menu {
+  display: none;
+}

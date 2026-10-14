@@ -1,0 +1,29 @@
+.color {
+  background: var(--ivory);
+  padding-right: 0;
+}
+
+.color .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-right: var(--pad);
+  margin-bottom: 48px;
+}
+
+.color .strip {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 var(--pad) 18px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.color .strip .ph {
+  flex: none;
+  scroll-snap-align: start;
+  height: min(62vh, 520px);
+}

@@ -1,0 +1,19 @@
+@media (min-width: 641px) {
+  .svc {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .svc .panel {
+    display: flex;
+    position: sticky;
+    top: 96px;
+    aspect-ratio: 4 / 5;
+  }
+
+  .svc .rows small {
+    display: block;
+  }
+}

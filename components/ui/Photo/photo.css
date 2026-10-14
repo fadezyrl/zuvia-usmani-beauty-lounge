@@ -1,0 +1,12 @@
+.ph {
+  position: relative;
+  overflow: hidden;
+}
+
+.ph img {
+  object-fit: cover;
+}
+
+.ph span {
+  display: none;
+}

@@ -1,0 +1,5 @@
+@media (max-width: 640px) {
+  .gal .cols {
+    columns: 2;
+  }
+}

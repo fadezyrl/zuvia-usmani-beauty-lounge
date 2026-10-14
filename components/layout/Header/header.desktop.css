@@ -1,0 +1,14 @@
+@media (min-width: 641px) {
+  .site-header .menu {
+    display: none;
+  }
+
+  .site-header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+}

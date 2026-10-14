@@ -1,0 +1,33 @@
+@media (min-width: 641px) {
+  .hair {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  .hair .a {
+    grid-column: 1 / 8;
+    aspect-ratio: 5 / 6;
+  }
+
+  .hair .b {
+    grid-column: 9 / 13;
+    aspect-ratio: 3 / 4;
+    margin-top: 140px;
+  }
+
+  .hair .t {
+    grid-column: 2 / 7;
+    margin-top: -80px;
+    position: relative;
+    background: var(--greige);
+    padding: 36px 36px 0 0;
+  }
+
+  .hair .c {
+    grid-column: 8 / 11;
+    aspect-ratio: 1;
+    margin-top: -90px;
+  }
+}

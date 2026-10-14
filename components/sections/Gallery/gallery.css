@@ -1,0 +1,39 @@
+.gal {
+  background: var(--ivory);
+}
+
+.gal .filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 36px 0 40px;
+}
+
+.gal .filters button {
+  font: 500 0.9rem var(--sans);
+  background: none;
+  border: 1px solid var(--taupe);
+  padding: 10px 16px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.gal .filters button[aria-pressed="true"] {
+  background: var(--black);
+  color: var(--ivory);
+  border-color: var(--black);
+}
+
+.gal .cols {
+  column-gap: 18px;
+}
+
+.gal .cols .ph {
+  break-inside: avoid;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.gal .cols .ph.hide {
+  display: none;
+}

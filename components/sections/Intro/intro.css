@@ -1,0 +1,10 @@
+.intro {
+  background: var(--ivory);
+}
+
+.intro .meta {
+  border-top: 1px solid var(--taupe);
+  padding-top: 14px;
+  color: var(--deep);
+  font-size: 0.95rem;
+}

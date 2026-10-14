@@ -1,0 +1,15 @@
+@media (max-width: 640px) {
+  .svc {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .svc .panel {
+    display: none;
+  }
+
+  .svc .rows small {
+    display: none;
+  }
+}

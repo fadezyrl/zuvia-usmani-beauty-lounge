@@ -1,0 +1,17 @@
+.contact {
+  background: var(--ivory);
+}
+
+.contact h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact .blk {
+  border-top: 1px solid var(--taupe);
+  padding: 22px 0;
+}
+
+.contact .map {
+  aspect-ratio: 4 / 3;
+}

@@ -1,0 +1,14 @@
+.deepbg {
+  background: var(--deep);
+  color: var(--ivory);
+  text-align: left;
+}
+
+.deepbg h2 {
+  max-width: 14ch;
+  margin-bottom: 28px;
+}
+
+.deepbg p {
+  color: #efe8e1;
+}
