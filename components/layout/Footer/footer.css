@@ -1,68 +1,64 @@
-.site-footer {
-  background: var(--black);
+.ft {
+  background: var(--ink);
   color: var(--ivory);
-  padding: 70px var(--pad) 40px;
+  border-top: 1px solid rgba(248, 245, 241, 0.2);
+  padding: 4rem var(--pad) 1.6rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.site-footer .fgrid {
+.ft-top {
   display: grid;
-  gap: 40px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #2f2a27;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
-.site-footer ul {
-  list-style: none;
+.ft .nm {
+  font: 300 clamp(1.8rem, 3vw, 2.8rem) / 1.05 var(--serif);
+  margin: 0;
+}
+
+.ft h3 {
+  font: 500 0.8rem / 1.4 var(--sans);
+  color: var(--taupe);
+  margin: 0 0 0.8rem;
+}
+
+.ft p,
+.ft ul {
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
 }
 
-.site-footer li {
-  margin-bottom: 8px;
+.ft a {
+  border-bottom: 1px solid rgba(248, 245, 241, 0.3);
 }
 
-.site-footer a {
-  text-decoration: none;
-  color: #d9d1ca;
+.ft a:hover {
+  border-color: var(--ivory);
 }
 
-.site-footer a:hover {
-  color: var(--ivory);
-  text-decoration: underline;
-}
-
-.site-footer h3 {
-  font: 600 0.95rem var(--sans);
-  margin-bottom: 14px;
-}
-
-.site-footer .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.site-footer .mono {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--ivory);
-  color: var(--black);
-  display: grid;
-  place-items: center;
-  font: 500 1.5rem / 1 var(--serif);
-  flex: none;
-}
-
-.site-footer .logo b {
-  font: 500 1.1rem / 1.2 var(--serif);
+.ft-big {
+  font: 300 clamp(5rem, 22vw, 22rem) / 0.75 var(--serif);
+  margin: 4rem 0 0 -2vw;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(248, 245, 241, 0.35);
+  letter-spacing: -0.04em;
   white-space: nowrap;
+  position: relative;
+  z-index: 0;
+  user-select: none;
 }
 
-.site-footer .fine {
-  padding-top: 24px;
-  color: #9a8f86;
-  font-size: 0.85rem;
+.ft small {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: 1.6rem;
+  font-size: 0.75rem;
+  color: var(--taupe);
 }

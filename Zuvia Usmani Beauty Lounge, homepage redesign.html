@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zuvia Usmani Beauty Lounge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--greige:#E4E0DD;--ink:#111111;--ivory:#F8F5F1;--taupe:#B7A69A;--deep:#78675D;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;--pad:clamp(1.25rem,5vw,4.5rem);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--greige);color:var(--ink);font:300 1rem/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.serif{font-family:var(--serif);font-weight:300}
+/* placeholder photo panels: replace with authorized Zuvia photography */
+.ph{position:relative;background:var(--taupe);overflow:hidden;display:flex;align-items:flex-end;padding:1rem;font-size:.8rem;line-height:1.35;color:var(--ink)}
+.ph b{display:block;font-weight:500}
+.ph.d{background:var(--deep);color:var(--ivory)}.ph.l{background:#cfc7c0}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:calc(env(safe-area-inset-top,0px) + .9rem) var(--pad) .9rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.s{background:var(--greige);border-color:rgba(17,17,17,.18)}
+.logo{width:42px;height:42px;display:block}
+.nav ul{display:flex;gap:2.2rem;list-style:none;margin:0 2.2rem 0 auto;padding:0;font-size:.88rem}
+.nav ul a{padding:.4rem 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s}
+.nav ul a:hover{background-size:100% 1px}
+.enq{font-size:.88rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid currentColor}
+.mb{display:none;background:none;border:0;font:inherit;font-size:.9rem;color:inherit;padding:.5rem 0;margin-left:1.2rem}
+@media(max-width:820px){.nav ul{position:fixed;inset:0;background:var(--ink);color:var(--ivory);flex-direction:column;justify-content:center;gap:1.2rem;margin:0;padding:var(--pad);font:300 2.6rem/1.1 var(--serif);transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.nav ul.o{transform:none;visibility:visible}.mb{display:block;position:relative;z-index:2;margin-left:auto}.nav ul.o~.mb{color:var(--ivory)}.logo{position:relative;z-index:2}}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:7rem var(--pad) 3.5rem;overflow:hidden}
+.ring{position:absolute;right:var(--pad);top:6.5rem;width:min(72vh,46vw);aspect-ratio:1}
+.ring .ph{width:100%;height:100%;border-radius:50%;justify-content:center;align-items:flex-end;padding-bottom:18%;text-align:center}
+.ring::after{content:"";position:absolute;inset:0;border:1px solid var(--ink);border-radius:50%;transform:translate(-5%,4%);pointer-events:none}
+.hero h1{position:relative;z-index:2;margin:0;font:300 clamp(4.6rem,17.5vw,18rem)/.8 var(--serif);letter-spacing:-.035em}
+.hero h1 span{display:block}.hero h1 span+span{padding-left:11vw;font-style:italic}
+.hero-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-top:2.5rem;max-width:62rem}
+.hero-foot p{margin:0;max-width:24rem;font-size:.95rem}
+@media(max-width:820px){.ring{width:80vw;top:5.5rem}.hero h1{font-size:23vw}.hero-foot{flex-direction:column;align-items:flex-start;gap:1.2rem;margin-top:1.8rem}.hero{padding-top:6rem}}
+
+/* ABOUT */
+.about{background:var(--ivory);padding:clamp(5rem,12vw,11rem) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem}
+.about h2{grid-column:1/10;margin:0;font:300 clamp(2.2rem,5.6vw,5.6rem)/1.08 var(--serif);letter-spacing:-.015em}
+.about h2 em{color:var(--deep)}
+.about .ph{grid-column:10/13;grid-row:1/3;aspect-ratio:3/5;margin-top:9rem}
+.about .sm{grid-column:2/7;margin-top:4rem;font-size:.98rem;max-width:30rem}
+.about .sm p{margin:0 0 1rem}
+@media(max-width:820px){.about{display:block}.about .ph{aspect-ratio:4/5;margin:3rem 0 0 28%}.about .sm{margin-top:2.2rem}}
+
+/* SERVICES */
+.svc{background:var(--ink);color:var(--ivory);padding:clamp(5rem,10vw,9rem) var(--pad);display:grid;grid-template-columns:1.5fr 1fr;gap:4vw}
+.svc-intro{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:2rem;border-bottom:1px solid rgba(248,245,241,.25);padding-bottom:1.6rem;margin-bottom:1rem}
+.svc-intro h2{margin:0;font:300 clamp(2rem,4vw,3.4rem)/1.1 var(--serif)}
+.svc-intro a{font-size:.88rem;border-bottom:1px solid currentColor;padding-bottom:.3rem;white-space:nowrap}
+.svc ol{list-style:none;margin:0;padding:0}
+.svc li a{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px solid rgba(248,245,241,.14);font:300 clamp(2.3rem,5.4vw,5.4rem)/1.05 var(--serif);letter-spacing:-.02em;color:rgba(248,245,241,.55);transition:color .3s,padding .4s}
+.svc li a:hover,.svc li a:focus-visible,.svc li.on a{color:var(--ivory);padding-left:1.2rem}
+.svc li small{font:300 .82rem/1.3 var(--sans);letter-spacing:0;color:var(--taupe);text-align:right;max-width:11rem}
+.svc li:nth-child(even) a{font-style:italic}
+.pv{position:sticky;top:6rem;align-self:start;aspect-ratio:3/4}
+.pv .ph{width:100%;height:100%}
+@media(max-width:820px){.svc{display:block}.pv{display:none}.svc-intro{flex-direction:column;align-items:flex-start}.svc li a{flex-direction:column;gap:.1rem;padding:.7rem 0}.svc li small{text-align:left;max-width:none}}
+
+/* GALLERY */
+.gal{background:var(--greige);padding:clamp(5rem,10vw,9rem) var(--pad)}
+.gal h2{margin:0 0 3.5rem;font:300 clamp(2rem,4vw,3.4rem)/1.1 var(--serif);max-width:34rem}
+.gg{display:grid;grid-template-columns:repeat(12,1fr);gap:1.6rem;align-items:start}
+.gg figure{margin:0}.gg figcaption{font-size:.78rem;margin-top:.6rem;color:var(--deep)}
+.g1{grid-column:1/6}.g1 .ph{aspect-ratio:4/5}
+.g2{grid-column:6/10;margin-top:7rem}.g2 .ph{aspect-ratio:1}
+.g3{grid-column:10/13;margin-top:2rem}.g3 .ph{aspect-ratio:3/5}
+.g4{grid-column:2/5;margin-top:-3rem}.g4 .ph{aspect-ratio:3/4}
+.g5{grid-column:5/11;margin-top:3rem}.g5 .ph{aspect-ratio:16/10}
+.g6{grid-column:11/13;margin-top:8rem}.g6 .ph{aspect-ratio:4/5}
+@media(max-width:820px){.gg{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;margin:0 calc(var(--pad)*-1);padding:0 var(--pad) 1rem;-webkit-overflow-scrolling:touch}
+.gg figure{flex:0 0 74vw;scroll-snap-align:start;margin:0!important}.gg .g5{flex-basis:88vw}.gg .g3,.gg .g6{flex-basis:56vw}}
+
+/* QUOTE / BRAND PAUSE */
+.pause{background:var(--deep);color:var(--ivory);padding:clamp(6rem,14vw,12rem) var(--pad);position:relative;overflow:hidden}
+.pause p{position:relative;z-index:1;margin:0;font:300 clamp(2.8rem,9vw,9rem)/.98 var(--serif);letter-spacing:-.03em;max-width:12ch}
+.pause p i{color:var(--greige)}
+.pause::after{content:"";position:absolute;right:-8vw;bottom:-14vw;width:min(54vw,640px);aspect-ratio:1;border:1px solid rgba(248,245,241,.4);border-radius:50%}
+
+/* CTA */
+.cta{background:var(--ink);color:var(--ivory);padding:clamp(6rem,13vw,12rem) var(--pad);display:grid;grid-template-columns:1fr auto;align-items:end;gap:3rem}
+.cta h2{margin:0;font:300 clamp(2.6rem,7vw,7rem)/1 var(--serif);letter-spacing:-.025em;max-width:11ch}
+.cta .b{display:inline-flex;align-items:center;justify-content:center;width:clamp(9rem,15vw,13rem);aspect-ratio:1;border:1px solid var(--ivory);border-radius:50%;text-align:center;font-size:.9rem;font-weight:500;line-height:1.3;padding:1rem;transition:background .35s,color .35s}
+.cta .b:hover{background:var(--ivory);color:var(--ink)}
+@media(max-width:820px){.cta{display:block}.cta .b{margin-top:2.5rem}}
+
+/* FOOTER */
+.ft{background:var(--ink);color:var(--ivory);border-top:1px solid rgba(248,245,241,.2);padding:4rem var(--pad) 1.6rem;position:relative;overflow:hidden}
+.ft-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:3rem;position:relative;z-index:1}
+.ft .nm{font:300 clamp(1.8rem,3vw,2.8rem)/1.05 var(--serif);margin:0}
+.ft h3{font:500 .8rem/1.4 var(--sans);color:var(--taupe);margin:0 0 .8rem}
+.ft p,.ft ul{margin:0;padding:0;list-style:none;font-size:.92rem}
+.ft a{border-bottom:1px solid rgba(248,245,241,.3)}.ft a:hover{border-color:var(--ivory)}
+.ft-big{font:300 clamp(5rem,22vw,22rem)/.75;font-family:var(--serif);margin:4rem 0 0 -2vw;color:transparent;-webkit-text-stroke:1px rgba(248,245,241,.35);letter-spacing:-.04em;white-space:nowrap;position:relative;z-index:0;user-select:none}
+.ft small{display:block;position:relative;z-index:1;margin-top:1.6rem;font-size:.75rem;color:var(--taupe)}
+@media(max-width:820px){.ft-top{grid-template-columns:1fr;gap:2rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <!-- Stand-in monogram. Swap for the original logo file when supplied. -->
+  <a href="#top" aria-label="Zuvia Usmani Beauty Lounge, home">
+    <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="none" stroke="#111" stroke-width="3"/><text x="50" y="68" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="58" fill="#111">Z</text></svg>
+  </a>
+  <ul id="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <a class="enq" href="https://www.instagram.com/zuviausmanibeautylounge/" rel="noopener">Enquire</a>
+  <button class="mb" id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="ring"><div class="ph"><span><b>Hero photograph</b>Bridal or makeup portrait, to be supplied</span></div></div>
+  <h1><span>Zuvia</span><span>Usmani</span></h1>
+  <div class="hero-foot">
+    <p>Hair, colour, makeup, bridal, nails and treatments, with Z Academy. DHA, Karachi, and Muscat. Since 2019.</p>
+    <a class="enq" href="#services">View services</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>A salon and academy in DHA, Karachi, open since 2019, <em>with a second address in Muscat.</em></h2>
+  <div class="ph l"><span><b>Portrait</b>Photograph to be supplied</span></div>
+  <div class="sm">
+    <p>Hair, colour, makeup and bridal work, nails and treatments are done under one roof. Z Academy teaches the same skills.</p>
+    <p>Every service and its price is listed in full on the menu pages.</p>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="svc-intro">
+    <h2>Services</h2>
+    <a href="#">Full price list</a>
+  </div>
+  <ol id="sl">
+    <li><a href="#" data-l="Haircuts and styling">Hair<small>Cuts and styling</small></a></li>
+    <li><a href="#" data-l="Hair colour and highlights">Colour<small>Colour and highlights</small></a></li>
+    <li><a href="#" data-l="Keratin and hair treatments">Keratin<small>Treatments</small></a></li>
+    <li><a href="#" data-l="Professional and bridal makeup">Makeup<small>Professional and bridal</small></a></li>
+    <li><a href="#" data-l="Nails">Nails<small>Manicure and more</small></a></li>
+    <li><a href="#" data-l="Skin and beauty">Skin<small>Skin and beauty</small></a></li>
+    <li><a href="#" data-l="Z Academy">Academy<small>Z Academy</small></a></li>
+  </ol>
+  <div class="pv" aria-hidden="true"><div class="ph d"><span><b id="pl">Haircuts and styling</b>Photograph to be supplied</span></div></div>
+</section>
+
+<section class="gal" id="gallery">
+  <h2>Selected work</h2>
+  <div class="gg">
+    <figure class="g1"><div class="ph"><span><b>Bridal</b>Photograph to be supplied</span></div><figcaption>Bridal</figcaption></figure>
+    <figure class="g2"><div class="ph d"><span><b>Makeup</b>Close-up, to be supplied</span></div><figcaption>Makeup</figcaption></figure>
+    <figure class="g3"><div class="ph l"><span><b>Nails</b>To be supplied</span></div><figcaption>Nails</figcaption></figure>
+    <figure class="g4"><div class="ph d"><span><b>Colour</b>Before and after, with consent</span></div><figcaption>Hair colour</figcaption></figure>
+    <figure class="g5"><div class="ph"><span><b>Salon and academy</b>Photograph to be supplied</span></div><figcaption>The salon, DHA</figcaption></figure>
+    <figure class="g6"><div class="ph l"><span><b>Cut</b>To be supplied</span></div><figcaption>Haircuts</figcaption></figure>
+  </div>
+</section>
+
+<section class="pause" aria-label="Locations">
+  <p>Karachi. Muscat. <i>Since 2019.</i></p>
+</section>
+
+<section class="cta">
+  <h2>Tell us what you have in mind.</h2>
+  <a class="b" href="https://www.instagram.com/zuviausmanibeautylounge/" rel="noopener">Enquire about an appointment</a>
+</section>
+</main>
+
+<footer class="ft" id="visit">
+  <div class="ft-top">
+    <div><p class="nm">Zuvia Usmani<br>Beauty Lounge</p></div>
+    <div>
+      <h3>Karachi</h3>
+      <p>142 C, Murtaza Commercial Lane 2,<br>Phase 8, DHA<br>11:00 AM to 8:00 PM, seven days</p>
+      <p style="margin-top:1rem">Also in Muscat, Oman.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#gallery">Gallery</a></li><li><a href="https://www.instagram.com/zuviausmanibeautylounge/" rel="noopener">Instagram</a></li></ul>
+    </div>
+  </div>
+  <div class="ft-big" aria-hidden="true">Z</div>
+  <small>&copy; 2026 Zuvia Usmani Beauty Lounge</small>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+  var nav=document.getElementById('nav'),m=document.getElementById('menu'),b=document.getElementById('mb');
+  function s(){nav.classList.toggle('s',scrollY>40)}addEventListener('scroll',s,{passive:true});s();
+  b.addEventListener('click',function(){var o=m.classList.toggle('o');b.setAttribute('aria-expanded',o);b.textContent=o?'Close':'Menu'});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('o');b.textContent='Menu'}});
+  var pl=document.getElementById('pl');
+  document.querySelectorAll('#sl a').forEach(function(a){
+    function on(){document.querySelectorAll('#sl li').forEach(function(l){l.classList.remove('on')});a.parentNode.classList.add('on');pl.textContent=a.dataset.l}
+    a.addEventListener('mouseenter',on);a.addEventListener('focus',on);
+  });
+  // One orchestrated moment: hero reveal. Page stays fully visible if GSAP or motion is unavailable.
+  if(window.gsap&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var t=gsap.timeline({defaults:{ease:'power3.out'}});
+    t.from('.ring .ph',{clipPath:'circle(0% at 50% 50%)',duration:1.4})
+     .from('.hero h1 span',{yPercent:40,opacity:0,duration:1,stagger:.15},'-=.9')
+     .from('.hero-foot',{opacity:0,duration:.8},'-=.4');
+  }
+})();
+</script>
+</body>
+</html>

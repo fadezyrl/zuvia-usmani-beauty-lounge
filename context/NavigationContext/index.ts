@@ -1,5 +1,1 @@
-export {
-  NavigationProvider,
-  useNavigation,
-  type SectionBg,
-} from "./NavigationContext";
+export { NavigationProvider, useNavigation } from "./NavigationContext";

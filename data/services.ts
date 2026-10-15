@@ -1,7 +1,8 @@
 export type ServiceItem = {
   id: string;
-  name: string;
-  line: string;
+  label: string;
+  short: string;
+  panel: string;
   href: string;
   image: string;
 };
@@ -9,51 +10,58 @@ export type ServiceItem = {
 export const SERVICES: ServiceItem[] = [
   {
     id: "hair",
-    name: "Haircuts and styling",
-    line: "Cuts, blow-dries, styling",
-    href: "#menu",
+    label: "Hair",
+    short: "Cuts and styling",
+    panel: "Haircuts and styling",
+    href: "#",
     image: "/images/hair-large.jpg",
   },
   {
-    id: "color",
-    name: "Hair color",
-    line: "Color and highlights",
-    href: "#menu",
+    id: "colour",
+    label: "Colour",
+    short: "Colour and highlights",
+    panel: "Hair colour and highlights",
+    href: "#",
     image: "/images/color-1.jpg",
   },
   {
-    id: "treatments",
-    name: "Keratin and treatments",
-    line: "Hair care treatments",
-    href: "#menu",
+    id: "keratin",
+    label: "Keratin",
+    short: "Treatments",
+    panel: "Keratin and hair treatments",
+    href: "#",
     image: "/images/hair-detail.jpg",
   },
   {
     id: "makeup",
-    name: "Makeup and bridal",
-    line: "Occasion and bridal looks",
-    href: "#menu",
+    label: "Makeup",
+    short: "Professional and bridal",
+    panel: "Professional and bridal makeup",
+    href: "#",
     image: "/images/gallery-bridal.jpg",
   },
   {
     id: "nails",
-    name: "Nails",
-    line: "Manicure and nail work",
-    href: "#menu",
+    label: "Nails",
+    short: "Manicure and more",
+    panel: "Nails",
+    href: "#",
     image: "/images/gallery-nails.jpg",
   },
   {
     id: "skin",
-    name: "Skin and beauty",
-    line: "As listed on the price list",
-    href: "#menu",
+    label: "Skin",
+    short: "Skin and beauty",
+    panel: "Skin and beauty",
+    href: "#",
     image: "/images/gallery-makeup.jpg",
   },
   {
     id: "academy",
-    name: "Z Academy",
-    line: "Professional training",
-    href: "#academy",
+    label: "Academy",
+    short: "Z Academy",
+    panel: "Z Academy",
+    href: "#",
     image: "/images/academy-training.jpg",
   },
 ];

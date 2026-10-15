@@ -1,0 +1,14 @@
+@media (max-width: 820px) {
+  .about {
+    display: block;
+  }
+
+  .about .ph {
+    aspect-ratio: 4 / 5;
+    margin: 3rem 0 0 28%;
+  }
+
+  .about .sm {
+    margin-top: 2.2rem;
+  }
+}

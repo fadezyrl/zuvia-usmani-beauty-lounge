@@ -1,7 +1,0 @@
-@media (max-width: 900px) {
-  .contact {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-}

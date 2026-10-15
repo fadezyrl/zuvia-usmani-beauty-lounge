@@ -1,39 +1,80 @@
 .gal {
-  background: var(--ivory);
+  background: var(--greige);
+  padding: clamp(5rem, 10vw, 9rem) var(--pad);
 }
 
-.gal .filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 36px 0 40px;
+.gal h2 {
+  margin: 0 0 3.5rem;
+  font: 300 clamp(2rem, 4vw, 3.4rem) / 1.1 var(--serif);
+  max-width: 34rem;
 }
 
-.gal .filters button {
-  font: 500 0.9rem var(--sans);
-  background: none;
-  border: 1px solid var(--taupe);
-  padding: 10px 16px;
-  cursor: pointer;
-  color: var(--black);
+.gg {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
+  align-items: start;
 }
 
-.gal .filters button[aria-pressed="true"] {
-  background: var(--black);
-  color: var(--ivory);
-  border-color: var(--black);
+.gg figure {
+  margin: 0;
 }
 
-.gal .cols {
-  column-gap: 18px;
+.gg figcaption {
+  font-size: 0.78rem;
+  margin-top: 0.6rem;
+  color: var(--deep);
 }
 
-.gal .cols .ph {
-  break-inside: avoid;
-  margin-bottom: 18px;
-  display: flex;
+.g1 {
+  grid-column: 1 / 6;
 }
 
-.gal .cols .ph.hide {
-  display: none;
+.g1 .ph {
+  aspect-ratio: 4 / 5;
+}
+
+.g2 {
+  grid-column: 6 / 10;
+  margin-top: 7rem;
+}
+
+.g2 .ph {
+  aspect-ratio: 1;
+}
+
+.g3 {
+  grid-column: 10 / 13;
+  margin-top: 2rem;
+}
+
+.g3 .ph {
+  aspect-ratio: 3 / 5;
+}
+
+.g4 {
+  grid-column: 2 / 5;
+  margin-top: -3rem;
+}
+
+.g4 .ph {
+  aspect-ratio: 3 / 4;
+}
+
+.g5 {
+  grid-column: 5 / 11;
+  margin-top: 3rem;
+}
+
+.g5 .ph {
+  aspect-ratio: 16 / 10;
+}
+
+.g6 {
+  grid-column: 11 / 13;
+  margin-top: 8rem;
+}
+
+.g6 .ph {
+  aspect-ratio: 4 / 5;
 }

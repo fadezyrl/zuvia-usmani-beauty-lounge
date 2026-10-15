@@ -1,66 +1,59 @@
 "use client";
 
-import { FOOTER_PAGE_LINKS } from "@/data/nav";
-import { SERVICES } from "@/data/services";
+import { INSTAGRAM_URL } from "@/data/nav";
 import "./footer.css";
-import "./footer.desktop.css";
 import "./footer.mobile.css";
-
-const INSTAGRAM_URL = "https://www.instagram.com/zuviausmanibeautylounge/";
 
 export const Footer = (): React.JSX.Element => {
   return (
-    <footer className="site-footer">
-      <div className="fgrid">
+    <footer className="ft" id="visit">
+      <div className="ft-top" data-reveal-stagger="">
         <div>
-          <a className="logo" href="#top">
-            <span className="mono" aria-hidden="true">
-              Z
-            </span>
-            <b>Zuvia Usmani Beauty Lounge</b>
-          </a>
-          <p style={{ marginTop: 18, color: "#bdb3aa" }}>
-            Salon and academy. Karachi and Muscat.
+          <p className="nm">
+            Zuvia Usmani
+            <br />
+            Beauty Lounge
           </p>
         </div>
         <div>
-          <h3>Pages</h3>
-          <ul>
-            {FOOTER_PAGE_LINKS.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
+          <h3>Karachi</h3>
+          <p>
+            142 C, Murtaza Commercial Lane 2,
+            <br />
+            Phase 8, DHA
+            <br />
+            11:00 AM to 8:00 PM, seven days
+          </p>
+          <p style={{ marginTop: "1rem" }}>Also in Muscat, Oman.</p>
         </div>
         <div>
-          <h3>Services</h3>
-          <ul>
-            {SERVICES.map((service) => (
-              <li key={service.id}>
-                <a href="#menu">{service.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3>Find us</h3>
+          <h3>Explore</h3>
           <ul>
             <li>
-              <a href="#contact">Karachi, DHA Phase 8</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href={INSTAGRAM_URL} rel="noopener noreferrer" target="_blank">
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a
+                href={INSTAGRAM_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Instagram
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <p className="fine">
-        Zuvia Usmani Beauty Lounge. Prices shown only once confirmed by the
-        business.
-      </p>
+      <div className="ft-big" aria-hidden="true" data-reveal="fade">
+        Z
+      </div>
+      <small data-reveal="copy">&copy; 2026 Zuvia Usmani Beauty Lounge</small>
     </footer>
   );
 };

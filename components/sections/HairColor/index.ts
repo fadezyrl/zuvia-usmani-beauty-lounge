@@ -1,1 +1,0 @@
-export { HairColor } from "./HairColor";

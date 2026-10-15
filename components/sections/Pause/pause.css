@@ -1,0 +1,32 @@
+.pause {
+  background: var(--deep);
+  color: var(--ivory);
+  padding: clamp(6rem, 14vw, 12rem) var(--pad);
+  position: relative;
+  overflow: hidden;
+}
+
+.pause p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font: 300 clamp(2.8rem, 9vw, 9rem) / 0.98 var(--serif);
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+}
+
+.pause p i {
+  color: var(--greige);
+  font-style: italic;
+}
+
+.pause::after {
+  content: "";
+  position: absolute;
+  right: -8vw;
+  bottom: -14vw;
+  width: min(54vw, 640px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(248, 245, 241, 0.4);
+  border-radius: 50%;
+}

@@ -1,15 +1,6 @@
-@media (max-width: 900px) {
-  .site-footer .fgrid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .site-footer .fgrid > div:first-child {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 480px) {
-  .site-footer .fgrid {
+@media (max-width: 820px) {
+  .ft-top {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

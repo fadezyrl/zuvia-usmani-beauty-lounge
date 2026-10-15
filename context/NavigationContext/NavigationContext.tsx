@@ -9,16 +9,12 @@ import {
   type ReactNode,
 } from "react";
 
-export type SectionBg = "greige" | "ivory" | "black" | "taupe" | "deep";
-
 type NavigationContextValue = {
   isMenuOpen: boolean;
+  isNavSolid: boolean;
   openMenu: () => void;
   closeMenu: () => void;
   toggleMenu: () => void;
-  headerTone: SectionBg;
-  isHeaderSolid: boolean;
-  isToneReady: boolean;
 };
 
 const NavigationContext = createContext<NavigationContextValue | null>(null);
@@ -31,46 +27,34 @@ export const NavigationProvider = ({
   children,
 }: NavigationProviderProps): React.JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [headerTone, setHeaderTone] = useState<SectionBg>("greige");
-  const [isHeaderSolid, setIsHeaderSolid] = useState(false);
-  const [isToneReady, setIsToneReady] = useState(false);
+  const [isNavSolid, setIsNavSolid] = useState(false);
 
   useEffect(() => {
-    const updateTone = (): void => {
-      const sections = Array.from(
-        document.querySelectorAll<HTMLElement>("section[data-bg]")
-      );
-      const y = 80;
-      let current = sections[0];
-
-      sections.forEach((section) => {
-        if (section.getBoundingClientRect().top <= y) {
-          current = section;
-        }
-      });
-
-      const bg = (current?.dataset.bg as SectionBg | undefined) ?? "greige";
-      setHeaderTone(bg);
-      setIsHeaderSolid(bg !== "black" && window.scrollY > 40);
-      setIsToneReady(true);
+    const onScroll = (): void => {
+      setIsNavSolid(window.scrollY > 40);
     };
 
-    updateTone();
-    window.addEventListener("scroll", updateTone, { passive: true });
-    return () => window.removeEventListener("scroll", updateTone);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   const value = useMemo((): NavigationContextValue => {
     return {
       isMenuOpen,
+      isNavSolid,
       openMenu: () => setIsMenuOpen(true),
       closeMenu: () => setIsMenuOpen(false),
       toggleMenu: () => setIsMenuOpen((open) => !open),
-      headerTone,
-      isHeaderSolid,
-      isToneReady,
     };
-  }, [isMenuOpen, headerTone, isHeaderSolid, isToneReady]);
+  }, [isMenuOpen, isNavSolid]);
 
   return (
     <NavigationContext.Provider value={value}>

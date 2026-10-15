@@ -1,8 +1,0 @@
-.social {
-  background: var(--greige);
-  text-align: left;
-}
-
-.social h2 {
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-}

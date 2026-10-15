@@ -1,7 +1,0 @@
-@media (min-width: 901px) {
-  .contact {
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: 70px;
-  }
-}

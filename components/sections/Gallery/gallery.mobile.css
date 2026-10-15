@@ -1,20 +1,26 @@
-@media (max-width: 900px) {
-  .gal .cols {
-    columns: 2;
-  }
-}
-
-@media (max-width: 480px) {
-  .gal .cols {
-    columns: 1;
-  }
-
-  .gal .filters {
-    gap: 8px;
+@media (max-width: 820px) {
+  .gg {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    margin: 0 calc(var(--pad) * -1);
+    padding: 0 var(--pad) 1rem;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .gal .filters button {
-    padding: 9px 12px;
-    font-size: 0.85rem;
+  .gg figure {
+    flex: 0 0 74vw;
+    scroll-snap-align: start;
+    margin: 0 !important;
+  }
+
+  .gg .g5 {
+    flex-basis: 88vw;
+  }
+
+  .gg .g3,
+  .gg .g6 {
+    flex-basis: 56vw;
   }
 }

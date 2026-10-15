@@ -1,1 +1,0 @@
-export { Hair } from "./Hair";

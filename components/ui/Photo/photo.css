@@ -1,13 +1,8 @@
 .ph {
   position: relative;
   overflow: hidden;
-  background: var(--taupe);
 }
 
 .ph > img {
   z-index: 1;
-}
-
-.dark .ph {
-  background: #2a2523;
 }
