@@ -1,6 +1,7 @@
 "use client";
 
 import { INSTAGRAM_LOUNGE, INSTAGRAM_MAKEUP } from "@/data/assets";
+import { LOCATION } from "@/data/location";
 import "./footer.css";
 import "./footer.mobile.css";
 
@@ -24,7 +25,10 @@ export const Footer = (): React.JSX.Element => {
             <br />
             11:00 AM to 8:00 PM, seven days
           </p>
-          <p style={{ marginTop: "1rem" }}>Also in Muscat, Oman.</p>
+          <p style={{ marginTop: "1rem" }}>
+            <a href={LOCATION.phoneHref}>{LOCATION.phoneDisplay}</a>
+          </p>
+          <p style={{ marginTop: "0.6rem" }}>Also in Muscat, Oman.</p>
         </div>
         <div>
           <h3>Follow the work</h3>

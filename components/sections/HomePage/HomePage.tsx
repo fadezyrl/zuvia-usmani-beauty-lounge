@@ -11,6 +11,7 @@ import { Colour } from "@/components/sections/Colour";
 import { Academy } from "@/components/sections/Academy";
 import { Gallery } from "@/components/sections/Gallery";
 import { Lounge } from "@/components/sections/Lounge";
+import { Map } from "@/components/sections/Map";
 import { Pause } from "@/components/sections/Pause";
 import { Cta } from "@/components/sections/Cta";
 
@@ -28,6 +29,7 @@ export const HomePage = (): React.JSX.Element => {
           <Academy />
           <Gallery />
           <Lounge />
+          <Map />
           <Pause />
           <Cta />
         </main>
