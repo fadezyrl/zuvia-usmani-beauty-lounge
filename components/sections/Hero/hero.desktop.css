@@ -1,4 +1,4 @@
-@media (min-width: 641px) {
+@media (min-width: 901px) {
   .hero {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -19,6 +19,7 @@
     aspect-ratio: 3 / 4;
     align-self: start;
     margin-top: 10px;
+    min-height: 420px;
   }
 
   .hero .copy {

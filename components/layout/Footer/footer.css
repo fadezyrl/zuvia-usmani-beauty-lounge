@@ -57,8 +57,8 @@
 }
 
 .site-footer .logo b {
-  font: 500 1.1rem / 1.1 var(--serif);
-  max-width: 11ch;
+  font: 500 1.1rem / 1.2 var(--serif);
+  white-space: nowrap;
 }
 
 .site-footer .fine {

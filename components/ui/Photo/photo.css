@@ -1,12 +1,13 @@
 .ph {
   position: relative;
   overflow: hidden;
+  background: var(--taupe);
 }
 
-.ph img {
-  object-fit: cover;
+.ph > img {
+  z-index: 1;
 }
 
-.ph span {
-  display: none;
+.dark .ph {
+  background: #2a2523;
 }

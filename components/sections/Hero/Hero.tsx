@@ -18,6 +18,7 @@ export const Hero = (): React.JSX.Element => {
         src="/images/hero-portrait.jpg"
         alt="Bridal makeup portrait at Zuvia Usmani Beauty Lounge"
         sizes="(max-width: 900px) 78vw, 40vw"
+        objectPosition="center 20%"
         priority
       />
       <div className="copy">

@@ -1,40 +1,61 @@
 "use client";
 
-import { useLocale } from "@/context/LocaleContext";
+import { Photo } from "@/components/ui/Photo";
 import "./hair-color.css";
+import "./hair-color.mobile.css";
 
-const RESULT_WIDTHS = [
-  "min(70vw,380px)",
-  "min(80vw,520px)",
-  "min(60vw,320px)",
-  "min(75vw,440px)",
-  "min(60vw,320px)",
+const COLOR_RESULTS = [
+  {
+    src: "/images/color-1.jpg",
+    alt: "Caramel balayage hair color result",
+    width: "min(70vw,380px)",
+  },
+  {
+    src: "/images/color-2.jpg",
+    alt: "Ash brown hair color result",
+    width: "min(80vw,520px)",
+  },
+  {
+    src: "/images/color-3.jpg",
+    alt: "Honey blonde highlights result",
+    width: "min(60vw,320px)",
+  },
+  {
+    src: "/images/color-4.jpg",
+    alt: "Chocolate brown hair color result",
+    width: "min(75vw,440px)",
+  },
+  {
+    src: "/images/color-5.jpg",
+    alt: "Glossy black hair color result",
+    width: "min(60vw,320px)",
+  },
 ] as const;
 
-const RESULT_TONES = ["l", "d", "", "l", "d"] as const;
-
 export const HairColor = (): React.JSX.Element => {
-  const { dictionary } = useLocale();
-
   return (
     <section className="color" id="hair-color" data-bg="ivory">
       <div className="head">
-        <h2>{dictionary.hairColor.title}</h2>
-        <p style={{ maxWidth: "34ch" }}>{dictionary.hairColor.body}</p>
+        <h2>Hair color</h2>
+        <p style={{ maxWidth: "34ch" }}>
+          Color work in sequence. Before and after pairs appear only where
+          genuine matching photos exist.
+        </p>
       </div>
       <div
         className="strip"
         tabIndex={0}
-        aria-label={dictionary.hairColor.stripLabel}
+        aria-label="Hair color photographs, scroll sideways"
       >
-        {dictionary.hairColor.results.map((label, index) => (
-          <div
-            key={label}
-            className={`ph ${RESULT_TONES[index]}`.trim()}
-            style={{ width: RESULT_WIDTHS[index] }}
-          >
-            <span>{label}</span>
-          </div>
+        {COLOR_RESULTS.map((item) => (
+          <Photo
+            key={item.src}
+            src={item.src}
+            alt={item.alt}
+            className="strip-item"
+            sizes="(max-width: 900px) 70vw, 380px"
+            style={{ width: item.width }}
+          />
         ))}
       </div>
     </section>

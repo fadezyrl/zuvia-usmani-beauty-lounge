@@ -1,42 +1,48 @@
 "use client";
 
-import { useLocale } from "@/context/LocaleContext";
+import { Photo } from "@/components/ui/Photo";
 import "./academy.css";
 import "./academy.desktop.css";
 import "./academy.mobile.css";
 
 export const Academy = (): React.JSX.Element => {
-  const { dictionary } = useLocale();
-
   return (
     <section className="academy" id="academy" data-bg="taupe">
       <div>
-        <h2>{dictionary.academy.title}</h2>
-        <p style={{ marginTop: 24 }}>{dictionary.academy.body}</p>
+        <h2>Z Academy</h2>
+        <p style={{ marginTop: 24 }}>
+          Professional training taught inside a working salon. Enquire for the
+          courses currently open.
+        </p>
         <a className="btn solid" href="#book">
-          {dictionary.academy.cta}
+          Explore Z Academy
         </a>
       </div>
       <div>
-        <div className="ph d">
-          <span>{dictionary.academy.imageLabel}</span>
-        </div>
+        <Photo
+          className="d"
+          src="/images/academy-training.jpg"
+          alt="Z Academy training session"
+          sizes="(max-width: 900px) 100vw, 50vw"
+        />
         <dl>
           <div>
-            <dt>{dictionary.academy.courses}</dt>
-            <dd>{dictionary.academy.coursesValue}</dd>
+            <dt>Courses</dt>
+            <dd>Course names to be confirmed by the business.</dd>
           </div>
           <div>
-            <dt>{dictionary.academy.duration}</dt>
-            <dd>{dictionary.academy.durationValue}</dd>
+            <dt>Duration</dt>
+            <dd>To be confirmed.</dd>
           </div>
           <div>
-            <dt>{dictionary.academy.fees}</dt>
-            <dd>{dictionary.academy.feesValue}</dd>
+            <dt>Fees</dt>
+            <dd>To be confirmed.</dd>
           </div>
           <div>
-            <dt>{dictionary.academy.enquiries}</dt>
-            <dd>{dictionary.academy.enquiriesValue}</dd>
+            <dt>Enquiries</dt>
+            <dd>
+              Send a message and the team will reply with current details.
+            </dd>
           </div>
         </dl>
       </div>

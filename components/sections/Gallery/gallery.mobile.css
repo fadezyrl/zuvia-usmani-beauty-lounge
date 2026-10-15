@@ -1,5 +1,20 @@
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .gal .cols {
     columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gal .cols {
+    columns: 1;
+  }
+
+  .gal .filters {
+    gap: 8px;
+  }
+
+  .gal .filters button {
+    padding: 9px 12px;
+    font-size: 0.85rem;
   }
 }

@@ -13,15 +13,16 @@ export const Header = (): React.JSX.Element => {
     closeMenu,
     headerTone,
     isHeaderSolid,
+    isToneReady,
   } = useNavigation();
 
   const classNames = [
     "site-header",
-    headerTone === "black" ? "over" : "",
-    isHeaderSolid ? "solid" : "",
-    isHeaderSolid && headerTone === "greige" ? "tone-greige" : "",
-    isHeaderSolid && headerTone === "taupe" ? "tone-taupe" : "",
-    isHeaderSolid && headerTone === "deep" ? "tone-deep" : "",
+    isToneReady && headerTone === "black" ? "over" : "",
+    isToneReady && isHeaderSolid ? "solid" : "",
+    isToneReady && isHeaderSolid && headerTone === "greige" ? "tone-greige" : "",
+    isToneReady && isHeaderSolid && headerTone === "taupe" ? "tone-taupe" : "",
+    isToneReady && isHeaderSolid && headerTone === "deep" ? "tone-deep" : "",
   ]
     .filter(Boolean)
     .join(" ");

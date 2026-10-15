@@ -18,6 +18,7 @@ type NavigationContextValue = {
   toggleMenu: () => void;
   headerTone: SectionBg;
   isHeaderSolid: boolean;
+  isToneReady: boolean;
 };
 
 const NavigationContext = createContext<NavigationContextValue | null>(null);
@@ -32,6 +33,7 @@ export const NavigationProvider = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [headerTone, setHeaderTone] = useState<SectionBg>("greige");
   const [isHeaderSolid, setIsHeaderSolid] = useState(false);
+  const [isToneReady, setIsToneReady] = useState(false);
 
   useEffect(() => {
     const updateTone = (): void => {
@@ -50,6 +52,7 @@ export const NavigationProvider = ({
       const bg = (current?.dataset.bg as SectionBg | undefined) ?? "greige";
       setHeaderTone(bg);
       setIsHeaderSolid(bg !== "black" && window.scrollY > 40);
+      setIsToneReady(true);
     };
 
     updateTone();
@@ -65,8 +68,9 @@ export const NavigationProvider = ({
       toggleMenu: () => setIsMenuOpen((open) => !open),
       headerTone,
       isHeaderSolid,
+      isToneReady,
     };
-  }, [isMenuOpen, headerTone, isHeaderSolid]);
+  }, [isMenuOpen, headerTone, isHeaderSolid, isToneReady]);
 
   return (
     <NavigationContext.Provider value={value}>

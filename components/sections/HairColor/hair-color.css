@@ -22,7 +22,8 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.color .strip .ph {
+.color .strip .ph,
+.color .strip .strip-item {
   flex: none;
   scroll-snap-align: start;
   height: min(62vh, 520px);

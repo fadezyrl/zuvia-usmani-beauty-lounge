@@ -1,4 +1,4 @@
-@media (min-width: 641px) {
+@media (min-width: 901px) {
   .hair {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

@@ -1,1 +1,0 @@
-export { DocumentDir } from "./DocumentDir";

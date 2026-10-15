@@ -1,4 +1,8 @@
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .site-header .logo b {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  }
+
   .site-header .menu {
     display: block;
     background: none;
@@ -7,6 +11,7 @@
     padding: 10px 14px;
     font: 500 0.9rem var(--sans);
     cursor: pointer;
+    flex: none;
   }
 
   .site-header nav ul {

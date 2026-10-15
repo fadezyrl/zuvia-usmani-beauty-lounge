@@ -1,7 +1,14 @@
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .academy {
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .academy dl div {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

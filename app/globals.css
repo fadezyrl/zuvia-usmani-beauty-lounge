@@ -42,6 +42,7 @@ body {
   color: var(--black);
   font: 400 17px / 1.65 var(--sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img,
@@ -143,28 +144,11 @@ section {
 .ph {
   background: var(--taupe);
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding: 14px;
-  color: var(--black);
-  font-size: 0.8rem;
-  line-height: 1.35;
   overflow: hidden;
-}
-
-.ph span {
-  max-width: 26ch;
-  background: rgba(248, 245, 241, 0.82);
-  padding: 6px 9px;
 }
 
 .dark .ph {
   background: #2a2523;
-  color: var(--ivory);
-}
-
-.dark .ph span {
-  background: rgba(17, 17, 17, 0.7);
 }
 
 .ph.d {
