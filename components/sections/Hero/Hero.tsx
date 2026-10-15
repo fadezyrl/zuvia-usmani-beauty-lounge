@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Photo } from "@/components/ui/Photo";
+import { ASSETS } from "@/data/assets";
 import "./hero.css";
 import "./hero.mobile.css";
 
@@ -54,10 +55,10 @@ export const Hero = (): React.JSX.Element => {
     <section className="hero" ref={heroRef}>
       <div className="ring">
         <Photo
-          src="/images/hero-portrait.jpg"
-          alt="Bridal makeup portrait"
+          src={ASSETS.hero}
+          alt="Bridal client at Zuvia Usmani Beauty Lounge, DHA Karachi"
           sizes="(max-width: 820px) 80vw, 46vw"
-          objectPosition="center 20%"
+          objectPosition="center 18%"
           priority
         />
       </div>
@@ -67,11 +68,11 @@ export const Hero = (): React.JSX.Element => {
       </h1>
       <div className="hero-foot">
         <p>
-          Hair, colour, makeup, bridal, nails and treatments, with Z Academy.
-          DHA, Karachi, and Muscat. Since 2019.
+          Bridal makeup, hair colour, and Z Academy — inside our DHA Phase 8
+          lounge. Open since 2019. Karachi and Muscat.
         </p>
-        <a className="enq" href="#services">
-          View services
+        <a className="enq" href="#bridal">
+          See bridal work
         </a>
       </div>
     </section>

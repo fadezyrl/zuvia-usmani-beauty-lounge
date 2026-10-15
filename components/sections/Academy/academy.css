@@ -1,0 +1,49 @@
+.academy {
+  background: var(--taupe);
+  color: var(--ink);
+  padding: clamp(5rem, 11vw, 10rem) var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.academy .lead h2 {
+  margin: 0 0 1.4rem;
+  font: 300 clamp(2.2rem, 5vw, 4.2rem) / 1.05 var(--serif);
+  letter-spacing: -0.02em;
+  max-width: 11ch;
+}
+
+.academy .lead p {
+  margin: 0 0 1.2rem;
+  max-width: 34ch;
+  font-size: 0.98rem;
+}
+
+.academy .lead .enq {
+  border-color: var(--ink);
+}
+
+.academy .pair {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.academy .pair .wide {
+  aspect-ratio: 4 / 5;
+}
+
+.academy .pair .tall {
+  aspect-ratio: 3 / 4;
+  margin-bottom: 12%;
+}
+
+.academy .note {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  color: rgba(17, 17, 17, 0.7);
+  max-width: 36ch;
+}

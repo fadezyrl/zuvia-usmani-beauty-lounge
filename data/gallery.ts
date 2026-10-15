@@ -1,59 +1,54 @@
+import { ASSETS } from "./assets";
+
 export type GalleryItem = {
   id: string;
   className: string;
   caption: string;
   title: string;
   src: string;
-  tone?: "d" | "l" | "";
 };
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "g1",
     className: "g1",
-    caption: "Bridal",
+    caption: "Bridal glam",
     title: "Bridal",
-    src: "/images/gallery-bridal.jpg",
-    tone: "",
+    src: ASSETS.classicBridal,
   },
   {
     id: "g2",
     className: "g2",
-    caption: "Makeup",
+    caption: "Soft glam",
     title: "Makeup",
-    src: "/images/gallery-makeup.jpg",
-    tone: "d",
+    src: ASSETS.softGlam,
   },
   {
     id: "g3",
     className: "g3",
-    caption: "Nails",
-    title: "Nails",
-    src: "/images/gallery-nails.jpg",
-    tone: "l",
+    caption: "Party look",
+    title: "Occasion",
+    src: ASSETS.partyGlam,
   },
   {
     id: "g4",
     className: "g4",
     caption: "Hair colour",
     title: "Colour",
-    src: "/images/color-2.jpg",
-    tone: "d",
+    src: ASSETS.colourPink,
   },
   {
     id: "g5",
     className: "g5",
-    caption: "The salon, DHA",
-    title: "Salon and academy",
-    src: "/images/gallery-salon.jpg",
-    tone: "",
+    caption: "The lounge, DHA",
+    title: "Salon",
+    src: ASSETS.lounge,
   },
   {
     id: "g6",
     className: "g6",
-    caption: "Haircuts",
-    title: "Cut",
-    src: "/images/hair-styling.jpg",
-    tone: "l",
+    caption: "Styled finish",
+    title: "Hair",
+    src: ASSETS.clientMoment,
   },
 ];

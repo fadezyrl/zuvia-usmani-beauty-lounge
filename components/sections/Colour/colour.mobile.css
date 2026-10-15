@@ -1,0 +1,13 @@
+@media (max-width: 820px) {
+  .colour .head {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .colour .f1 .ph,
+  .colour .f2 .ph,
+  .colour .f3 .ph {
+    min-height: min(52vh, 420px);
+  }
+}

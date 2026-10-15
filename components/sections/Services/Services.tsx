@@ -14,8 +14,8 @@ export const Services = (): React.JSX.Element => {
   return (
     <section className="svc" id="services">
       <div className="svc-intro" data-reveal="title">
-        <h2>Services</h2>
-        <a href="#">Full price list</a>
+        <h2>What we do in the lounge</h2>
+        <a href="#lounge">Hours and visit</a>
       </div>
       <ol id="sl" data-reveal-stagger="">
         {SERVICES.map((service) => (

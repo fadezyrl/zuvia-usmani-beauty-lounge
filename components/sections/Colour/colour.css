@@ -1,0 +1,80 @@
+.colour {
+  background: var(--ivory);
+  padding: clamp(5rem, 10vw, 9rem) 0 clamp(5rem, 10vw, 9rem) var(--pad);
+  overflow: hidden;
+}
+
+.colour .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  padding-right: var(--pad);
+  margin-bottom: 3rem;
+  max-width: 100%;
+}
+
+.colour h2 {
+  margin: 0;
+  font: 300 clamp(2rem, 4.5vw, 3.8rem) / 1.08 var(--serif);
+  max-width: 12ch;
+  letter-spacing: -0.02em;
+}
+
+.colour .head p {
+  margin: 0;
+  max-width: 28ch;
+  font-size: 0.95rem;
+  color: var(--deep);
+}
+
+.colour .rail {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 var(--pad) 1.2rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.colour .rail figure {
+  margin: 0;
+  flex: none;
+  scroll-snap-align: start;
+}
+
+.colour .rail .ph {
+  height: min(68vh, 560px);
+}
+
+.colour .rail figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.78rem;
+  color: var(--deep);
+  letter-spacing: 0.02em;
+}
+
+.colour .f1 {
+  width: min(72vw, 420px);
+}
+
+.colour .f2 {
+  width: min(58vw, 340px);
+}
+
+.colour .f3 {
+  width: min(80vw, 480px);
+}
+
+.colour .f1 .ph {
+  aspect-ratio: 3 / 4;
+  height: auto;
+  min-height: min(68vh, 560px);
+}
+
+.colour .f2 .ph,
+.colour .f3 .ph {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  min-height: min(60vh, 500px);
+}

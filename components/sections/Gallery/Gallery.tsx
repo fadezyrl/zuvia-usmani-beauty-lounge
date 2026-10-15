@@ -8,12 +8,11 @@ import "./gallery.mobile.css";
 export const Gallery = (): React.JSX.Element => {
   return (
     <section className="gal" id="gallery">
-      <h2 data-reveal="title">Selected work</h2>
+      <h2 data-reveal="title">From the floor. Not a catalogue.</h2>
       <div className="gg" data-reveal-stagger="">
         {GALLERY_ITEMS.map((item) => (
           <figure key={item.id} className={item.className}>
             <Photo
-              className={item.tone}
               src={item.src}
               alt={item.title}
               sizes="(max-width: 820px) 74vw, 40vw"

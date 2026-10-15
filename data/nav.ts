@@ -5,10 +5,10 @@ export type NavLink = {
 
 export const NAV_LINKS: NavLink[] = [
   { href: "#about", label: "About" },
+  { href: "#bridal", label: "Bridal" },
   { href: "#services", label: "Services" },
-  { href: "#gallery", label: "Gallery" },
+  { href: "#academy", label: "Academy" },
   { href: "#visit", label: "Visit" },
 ];
 
-export const INSTAGRAM_URL =
-  "https://www.instagram.com/zuviausmanibeautylounge/";
+export { INSTAGRAM_LOUNGE as INSTAGRAM_URL } from "./assets";

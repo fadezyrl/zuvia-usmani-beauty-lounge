@@ -1,12 +1,12 @@
 "use client";
 
-import { INSTAGRAM_URL } from "@/data/nav";
+import { INSTAGRAM_LOUNGE, INSTAGRAM_MAKEUP } from "@/data/assets";
 import "./footer.css";
 import "./footer.mobile.css";
 
 export const Footer = (): React.JSX.Element => {
   return (
-    <footer className="ft" id="visit">
+    <footer className="ft">
       <div className="ft-top" data-reveal-stagger="">
         <div>
           <p className="nm">
@@ -27,24 +27,30 @@ export const Footer = (): React.JSX.Element => {
           <p style={{ marginTop: "1rem" }}>Also in Muscat, Oman.</p>
         </div>
         <div>
-          <h3>Explore</h3>
+          <h3>Follow the work</h3>
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a href="#bridal">Bridal</a>
             </li>
             <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery</a>
+              <a href="#academy">Z Academy</a>
             </li>
             <li>
               <a
-                href={INSTAGRAM_URL}
+                href={INSTAGRAM_LOUNGE}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Instagram
+                @zuviausmanibeautylounge
+              </a>
+            </li>
+            <li>
+              <a
+                href={INSTAGRAM_MAKEUP}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @zuvia.usmani.makeup
               </a>
             </li>
           </ul>
