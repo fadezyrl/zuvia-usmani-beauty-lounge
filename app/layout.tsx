@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: "Zuvia Usmani Beauty Lounge",
   description:
     "Hair, colour, makeup, bridal, nails and treatments, with Z Academy. DHA, Karachi, and Muscat. Since 2019.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-icon.jpg" }],
+  },
 };
 
 export default function RootLayout({
